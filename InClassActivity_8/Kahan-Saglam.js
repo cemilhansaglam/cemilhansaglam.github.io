@@ -58,11 +58,12 @@ function displayResults() {
 
 	var total = 0;
 	var highest = scores[0];
-
-	for (var i = 0; i < scores.length; i++) {
+	var temp = 0;
+	for (i = 0; i < scores.length; i++) {
 		total += scores[i];
 		if (scores[i] > highest) {
 			highest = scores[i];
+			temp = i;
 		}
 	}
 
@@ -70,8 +71,8 @@ function displayResults() {
 
 	$("results").innerHTML = `
         <h2>Results</h2>
-        <p>Average score is ${average.toFixed(2)}</p>
-        <p>Highest score is ${highest}</p>
+        <p>Average score = ${average.toFixed(2)}</p>
+        <p>Highest score = ${names[temp]} with a score of ${highest}</p>
     `;
 }
 
