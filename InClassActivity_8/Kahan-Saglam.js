@@ -9,8 +9,7 @@ window.onload = function () {
 	$("display_results").onclick = displayResults;
 	$("display_scores").onclick = displayScores;
 	$("add").onclick = addScore;
-
-
+	$("name").focus();
 };
 
 function addScore() {
